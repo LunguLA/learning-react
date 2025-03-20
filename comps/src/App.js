@@ -1,30 +1,26 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import Button from './Button'
 
 function App() {
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>React Starter Project</h1>
-      <div className="card">
-        <p>
-          Edit <code>src/App.js</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  );
+    const handleClick = () => {
+        console.log("kol")
+    }
+    return <div>
+        <div>
+            <Button primary rounded outline onClick={handleClick}>Click me!!</Button>
+        </div>
+        <div>
+            <Button secondary rounded outline>Buy Now</Button>
+        </div>
+        <div>
+            <Button success rounded outline>Check me out</Button>
+        </div>
+        <div>
+            <Button warning rounded outline>Press meeee</Button>
+        </div>
+        <div>
+            <Button danger rounded outline>Common</Button>
+        </div>
+    </div>
 }
 
-export default App;
+export default App
